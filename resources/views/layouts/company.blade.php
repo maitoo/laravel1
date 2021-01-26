@@ -9,59 +9,31 @@
     
     <style>
     body {font-size:16pt; color:black; margin: 0px; }
+
     h1 { font-size:60pt; text-align:center; color:white;
     margin:-70px 0px 30px 0px; letter-spacing:-4pt; font-family: 'Londrina Shadow', cursive;}
+
     h2 {font-size:30pt; text-align:center; color:white;
     margin:-40px 0px 30px 0px; letter-spacing:-4pt;}
-    ul { font-size:12pt; }
-    hr { margin: 25px 100px; border-top: 1px dashed #ddd; }
-    .menutitle {font-size:14pt; font-weight:bold; margin: 0px; }
+
     .content {margin:50px; text-align:center;}
-    .footer { text-align:right; font-size:10pt; margin:10px;
-    border-bottom:solid 1px #ccc; color:#ccc; }
     tr {margin:20px 0px -30px 0px;}
-    th {background-color:#3498db; color:#fff; padding:5px 10px; padding-color:black;}
-    td {border: solid 1px #aaa; color:black; padding:5px 10px; font-size:13pt;
+
+    th {background-color:#3498db; color:#fff; padding:5px 5px; padding-color:black; width: 150px; text-align: left;}
+
+    td {border: solid 1px #aaa; color:black; padding:5px 5px; font-size:13pt;
         background-color: white;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all  0.3s ease;
     }
+
     table {border-collapse: collapse; width:1390px; text-align:center; margin:10px 8px 10px; table-layout: fixed;}
+
     table th, table td {border: solid 1px black;}
-    .box1 {padding: 0.5em 0.5em ;margin: 0px 0px; width: auto;  border: solid 3px #000000; }
-    .box1 p {margin: 0px 5px 0px -5px; padding: 0; width: auto 10;}
-    
-    .button_wrapper remodal-bg{font-size: 1.4em;
-font-weight: bold;
-padding: 10px 30px;
-color: #fff;
-border-style: none;
-box-shadow: 2px 2px 3px 1px #666;
--moz-box-shadow: 2px 2px 3px 1px #666;
--webkit-box-shadow: 2px 2px 3px 1px #666;
-text-shadow: 1px 1px 2px #000;
-background: -moz-linear-gradient(bottom, #36d, #248 50%, #36d);
-background: -webkit-gradient(linear, left bottom, left top, from(#36d), color-stop(0.5, #248), to(#36d));
--moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-}
-.button_wrapper remodal-bg:hover{
-    opacity: 0.8;
-    background-color:blue;
-}
-.disp-img{
-    background-image:url(../image/Go-back_3672.png);             
-    background-repeat:  no-repeat;                              
-    width:auto;                                   
-    height:65pX;
-    align:left;
-    object-fit: cover;
-    margin: 10px 45px;                                  
-}
-.disp-img2{
+  
+    .disp-img2{
     background-image:url(../image/Go-back_3672.png);             
     background-repeat:  no-repeat;                              
     width:65px;                                   
@@ -71,22 +43,12 @@ background: -webkit-gradient(linear, left bottom, left top, from(#36d), color-st
     margin: 10px 45px; 
     background-color: transparent;
     border-color: transparent;                                
-}
-.disp-img2:hover {
+    }
+
+    .disp-img2:hover {
     backdrop-filter: blur(12px);
-}
-    .buttom {background-image:url(../image/Go-back_3672.png);             
-    background-repeat:  no-repeat; 
-    width:auto;                                   
-    height:65pX;
-    align:left;
-    object-fit: cover;
-    margin: 0 45px;   }
-    a {align: right;}
-    p {margin: 10px;}
-    .submit {text-align: right; margin:-60px 90px;}
-    .a {width: 300px;}
-    .text {width: 1000px; align:left;}
+    }
+
     h1 {
     color: #fff;
     font-family: 'Oswald', sans-serif;
@@ -153,25 +115,42 @@ background: -webkit-gradient(linear, left bottom, left top, from(#36d), color-st
     @media (min-width: 60em) {
     h1 { font-size: 100px; }
     }
-    input.kaitou {
-        width: 90%;
-        align: center;
+    
+    html,body {
+    background-image:url(../image/tree.jpg);
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
     }
 
-    html,
-body {
-  background-image:url(../image/tree.jpg);
-  background-color: white;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-}
+    .search {background: silver; color: black; border-color: silver; height: 50px;}
 
-.ab{font-size:20pt; font-weight:bold;
-      height: 20px; padding: 0 0 0 30px;} 
-.abc{text-align:right}
-.公開{color:red;}
+    .search:hover {opacity: 0.8;}
+
+    .button {
+      display       : inline-block;
+      border-radius : 20%;          /* 角丸       */
+      font-size     : 13pt;        /* 文字サイズ */
+      text-align    : center;      /* 文字位置   */
+      cursor        : pointer;     /* カーソル   */
+      padding       : 5px 5px;   /* 余白       */
+      background    : blue;     /* 背景色     */
+      color         : #ffffff;     /* 文字色     */
+      line-height   : 1em;         /* 1行の高さ  */
+      transition    : .3s;         /* なめらか変化 */
+      box-shadow    : 6px 6px 3px #666666;  /* 影の設定 */
+      border        : 2px solid blue;    /* 枠の指定 */
+      width         : 80px;
+      margin        : 0 140px;
+    }
+    .button:hover {
+      box-shadow    : none;        /* カーソル時の影消去 */
+      color         : #ffffff;     /* 背景色     */
+      background    : blue;     /* 文字色     */
+    }
+
 </style>
 
 </div>

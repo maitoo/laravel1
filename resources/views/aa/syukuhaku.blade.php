@@ -1,53 +1,48 @@
 @extends('layouts.syukuhakuapp')
-<table class="migi">
-<tr><th>検索</th><th>交通</th><th>設定</th></tr>
-<tr>
-<td><INPUT border="1" type="button" onclick="" class="disp-img5"></td>
-<td><INPUT border="1" type="button" onclick="" class="disp-img6"></td>
-<td><INPUT border="1" type="button" onclick="" class="disp-img7"></td>
-</tr>
-</table>
-@section('title', '宿泊')
+
+<link href='https://fonts.googleapis.com/css?family=Noto+Serif+JP' rel="stylesheet">
+<style>
+  .pagination { font-size:15pt; margin:0 0 0 550px;}
+  .pagination li { display:inline-block }
+</style>
+
+<div class="title0" font-size="20px">
+  <div class="title" font-size="20px">
+    宿泊
+  </div>
+</div>
 
 @section('content1')
-<table>
-<tr><th>宿泊</th><th>飲食</th><th>観光</th><th>Free</th></tr>
-<form action="/syukuhaku" method="post">
-<tr>
-  <td><INPUT border="1" type="button" onclick="location.href='./syukuhaku'" class="disp-img1"></td>
-  <td><INPUT border="1" type="button" onclick="location.href='./insyoku'" class="disp-img2"></td>
-  <td><INPUT border="1" type="button" onclick="location.href='./kankou'" class="disp-img3"></td>
-  <td><INPUT border="1" type="button" onclick="location.href='./free'" class="disp-img4"></td>
-  </tr>
-  </table>
+
   <hr size="1">
   <p>店名・キーワードから検索</p>
   <hr size="1">
   </form>
 @endsection
+
+
 @section('content2')
 <form action="/syukuhaku/keyword" method="get">
-<input type="text"  style= "width:900px;height:50px"; name="syukuhaku" placeholder="       🔍施設名等を入力">
-<tr><th></th><td>
-      <input class="touroku" type="submit" value="検索"></td></tr>
+@csrf
+<input type="text"  style= "width:900px;height:50px"; name="syukuhaku" placeholder="🔍施設名等を入力">
+<input  class="btn-square-slant" type="submit" value="検索"></imput>
 </form>
 @endsection
 
 @section('content3')
 <hr size="1">
 <p>地方エリアから探す</p>
-
 <hr size="1">
+
 <hr size="1">
 
     <h2>北海道地方</h2>
 
-    <hr size="1">
-
-    <h3><input type="submit" value="北海道" 
-      onclick="location.href='./syukuhakuarea'"
-      style= "width:200px;height:50px;font-size:20;"></input></h3>
-
+    <h3><input type="submit" value="北海道" onclick="location.href='./syukuhakuarea'" 
+    style= "width:200px;height:50px;font-size:20;"></input></h3>
+  
+  
+  
     <hr size="1">
 
     <h4>東北地方</h4>
@@ -59,7 +54,7 @@
     <input type="submit" value="岩手県"
       style= "width:200px;height:50px;font-size:20;">
     <input type="submit" value="宮城県"
-      style= "width:200px;height:50px;font-size:20;">
+      style= "width:200px;height:50px;font-size:20;"><br>
     <input type="submit" value="秋田県"
       style= "width:200px;height:50px;font-size:20;">
     <input type="submit" value="山形県"
@@ -196,7 +191,7 @@
 
 @endsection
 
-@section('content4')
+@section('content5')
 <head>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 </head>
@@ -221,3 +216,13 @@
   </header>
 </body>
 @endsection
+@section('content4')
+<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+<div class="menyu1">
+  <div class="menyu2">
+	  <a class="active" href="./syukuhaku">SYUKUHAKU 🏨</a>
+	  <a href="./insyoku">INSYOKU 🍜</a>
+	  <a href="./kankou">KANKOU 🗼</a>
+	  <a href="./Free">FREE (`･ω･´)b</a>
+  </div>
+</div>

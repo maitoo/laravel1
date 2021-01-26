@@ -68,6 +68,8 @@ class KensakuController extends Controller
 
     public function insyokukey(Request $request)
     {
+       
+
         $keyword = $request->input('insyoku');
  
         $query = information::query();
@@ -85,9 +87,10 @@ class KensakuController extends Controller
                 ->orWhere('street_address', 'LIKE', "%{$keyword}%");
         }
  
-        $items = $query->get();
- 
-        return view('aa.insyoku_table', compact('items', 'keyword'));
+        $sort = $request->sort;
+       $items = DB::table('Information')->orderBy('store_name', 'asc')->Paginate(2);
+       $param = ['items' => $items, 'sort' => $sort];
+        return view('aa.insyoku_table', compact('items', 'keyword') );
     }
 
     public function syukuhakukey(Request $request)
@@ -135,6 +138,8 @@ class KensakuController extends Controller
  
         $items = $query->get();
  
+        
+
         return view('aa.kankou_table', compact('items', 'keyword'));
     }
 }

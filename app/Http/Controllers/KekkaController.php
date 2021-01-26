@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 
 use App\Models\Information;
 
+use Illuminate\Pagination\paginator;
 use App\Person;
 
 class KekkaController extends Controller
@@ -54,4 +55,32 @@ class KekkaController extends Controller
  
         return view('aa.kensakuDB', compact('items', 'keyword'));
     }
+
+    public function kekka_s(Request $request)
+    {
+        $sort = $request->sort;
+        //$items = DB::table('Information')->simplePaginate(3);
+        $items = DB::table('Information')->orderBy('store_name', 'asc')->Paginate(2);
+        //$items = Information::orderBy('store_name', 'desc')->Paginate(2);
+        $param = ['items' => $items, 'sort' => $sort];
+        return view('kensaku.kekka_s', $param);
+    }
+
+   public function kekka_i(Request $request)
+   {
+       $sort = $request->sort;
+       $items = DB::table('Information')->orderBy('store_name', 'asc')->Paginate(2);
+       $param = ['items' => $items, 'sort' => $sort];
+       return view('kensaku.kekka_i', $param);
+   }
+
+   public function kekka_k(Request $request)
+   {
+    $sort = $request->sort;
+    //$items = DB::table('Information')->simplePaginate(3);
+    $items = DB::table('Information')->orderBy('store_name', 'asc')->Paginate(2);
+    //$items = Information::orderBy('store_name', 'desc')->Paginate(2);
+    $param = ['items' => $items, 'sort' => $sort];
+    return view('kensaku.kekka_k', $param);
+}
 }

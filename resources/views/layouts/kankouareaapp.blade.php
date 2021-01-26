@@ -5,7 +5,9 @@
     <style>
       .hoteru{font-size:20pt; font-weight:bold;
       height: 20px; padding: 0 0 0 30px;} 
-      .hoteru2{color:black; margin:0 95px 0 -30px; background-color:orange;}
+      .hoteru2{color:black; margin:0 95px 0 -60px; background-color:orange;}
+      body{ background:radial-gradient(#FFFFFF, #CBFFD3); }
+      .kankou{margin:0 0 0 20px;}
       p{font-size: 20pt; margin: -15px 0 -15px 0}
       hr{margin: 20px 95px 0 -30px;}
       th{background-color:#999; color:#fff; padding:5px 10px;}

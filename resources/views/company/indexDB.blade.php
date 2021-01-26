@@ -11,8 +11,8 @@
     <table border="2" class="table-size" >
     @csrf
         <tr>
-          <td class="name" width="300px;">店名</td>
-          <td height="100px;" >{{ $item->store_name}}</td>
+            <td class="name" width="300px;">店名</td>
+            <td height="100px;" >{{ $item->store_name}}</td>
         </tr>
         <tr>
             <td class="name1">店情報</td>
@@ -20,8 +20,8 @@
             </td>
         </tr>
         <tr>
-        <td class="name2">紹介文</td>
-        <td class="info2" height="90px;">{{ $item->store_introduction}}</td>
+            <td class="name2">紹介文</td>
+            <td class="info2" height="90px;">{{ $item->store_introduction}}</td>
         </tr>
         <tr>
         <td class="name3">アレルギー情報</td>

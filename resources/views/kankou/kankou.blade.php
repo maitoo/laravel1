@@ -1,34 +1,27 @@
 @extends('layouts.kankouapp')
-<table class="migi">
-<tr><th>検索</th><th>交通</th><th>設定</th></tr>
-<tr>
-<td><INPUT border="1" type="button" onclick="" class="disp-img5"></td>
-<td><INPUT border="1" type="button" onclick="" class="disp-img7"></td>
-<td><INPUT border="1" type="button" onclick="" class="disp-img6"></td>
-</tr>
-</table>
+<link href='https://fonts.googleapis.com/css?family=Noto+Serif+JP' rel="stylesheet">
+<style>
+  .pagination { font-size:10pt; }
+  .pagination li { display:inline-block }
+</style>
+
+<div class="title0" font-size="20px">
+  <div class="title" font-size="20px">
+    観光
+  </div>
+</div>
 @section('title', '観光')
 
 @section('content1')
-<table>
-<tr><th>宿泊</th><th>飲食</th><th>観光</th><th>Free</th></tr>
-<form action="/kankou" method="post">
-<tr>
-  <td><INPUT border="1" type="button" onclick="location.href='./syukuhaku'" class="disp-img1"></td>
-  <td><INPUT border="1" type="button" onclick="location.href='./insyoku'" class="disp-img2"></td>
-  <td><INPUT border="1" type="button" onclick="location.href='./kankou'" class="disp-img3"></td>
-  <td><INPUT border="1" type="button" onclick="location.href='./freemap'" class="disp-img4"></td>
-  </tr>
-  </table>
+
   <hr size="1">
   <p>店名・キーワードから検索</p>
   <hr size="1">
   </form>
 @endsection
 @section('content2')
-<input type="text"  style= "width:900px;height:50px"; name="kankou" placeholder="       🔍建造物等を入力">
-<tr><th></th><td>
-      <input class="touroku" type="submit" onclick="location.href=''" value="検索"></td></tr>
+<input type="text"  style= "width:900px;height:50px"; name="kankou" placeholder="🔍建造物等を入力">
+<a onclick="location.href='./kekka_k'" class="btn-square-slant">検索</a>
 @endsection
 
 @section('content3')

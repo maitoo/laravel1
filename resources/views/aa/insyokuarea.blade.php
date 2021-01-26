@@ -5,7 +5,7 @@
 <hr size="1">
   <div class="hoteru">
     <div class="hoteru2">
-    飲食店情報
+      <p class="insyoku">飲食店情報</p>
     </div>
   </div>
 <hr size="1">
@@ -17,7 +17,7 @@
 
 <hr size="1">
 
-  <h3><input type="submit" value="札幌"
+  <h3><input type="submit" value="札幌" onclick="location.href='./kekka_i'"
     style= "width:1200px;height:50px;font-size:20;margin:10px 0 0 0;">
   <input type="submit" value="函館・大沼・前松" 
     style= "width:1200px;height:50px;font-size:20;margin:10px 0 0 0;">

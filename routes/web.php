@@ -132,7 +132,8 @@ Route::get('information/add', 'App\Http\Controllers\InformationController@add');
 Route::post('create', 'App\Http\Controllers\InformationController@create');
 Route::post('confirm', 'App\Http\Controllers\InformationController@confirm');
 
-Route::get('information/edit', 'App\Http\Controllers\InformationController@edit');
+Route::get('information/edit',
+'App\Http\Controllers\InformationController@edit');
 Route::post('information/edit', 'App\Http\Controllers\InformationController@update');
 Route::get('information/del', 'App\Http\Controllers\InformationController@delete');
 Route::post('information/del', 'App\Http\Controllers\InformationController@remove');
@@ -151,3 +152,12 @@ Route::post('check','App\Http\Controllers\ContactController@check');
 Route::get('kensakuDB','App\Http\Controllers\KekkaController@kensakuDB');
 
 Route::get('map','App\Http\Controllers\MapController@index');
+
+Route::get('kekka_s', 'App\Http\Controllers\KekkaController@kekka_s');
+Route::get('kekka_i', 'App\Http\Controllers\KekkaController@kekka_i');
+Route::get('kekka_k', 'App\Http\Controllers\KekkaController@kekka_k');
+
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
